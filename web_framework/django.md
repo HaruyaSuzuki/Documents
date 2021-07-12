@@ -22,12 +22,23 @@ settings.py内にあるLANGUAGE_CODEをjaに変更。 TIME_ZONEをAsia/Tokyoに�
 templatesフォルダを作成。 -> 登録しているアプリのフォルダを中に作成。
 settings.py内にあるTEMPLATES = [{'DIRS': []}]の[]の中に"os.path.normpath(os.path.join(BASE_DIR, 'templates')),"を記載。
 
-> staticフォルダの設定 staticフォルダを作成 -> 中にjs, css, imagesなどのフォルダを作成。 
-settings.py内にあるSTATIC_URLの下に以下のコードを貼り付け。(import os必須) 
+> staticフォルダの設定 staticフォルダを作成 -> 中にjs, css, imagesなどのフォルダを作成。
+settings.py内にあるSTATIC_URLの下に以下のコードを貼り付け。(import os必須)
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, "static"), )
 
 MEDIA_ROOTの設定 pip3 install pillow # Python 3.x settings.pyに以下のコードを記載。(import os必須) MEDIA_URL = '/media/' MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-> サービス名ディレクトリにあるurls.pyに以下のコードを追加。 
+> サービス名ディレクトリにあるurls.pyに以下のコードを追加。
 from django.conf import settings from django.conf.urls.static import static
 if settings.DEBUG: urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# migrateのやり直し手順
+## migrateの履歴確認
+> python3 manage.py showmigrations: アプリ別、adminなどの履歴がある。([X]がついていると適応済)
+## テーブルをDropして削除(mysql内にて実行)
+> drop table [テーブル名];
+## アプリケーション内のmigrationsフォルダの中身を全て削除
+## migrateの履歴削除
+> python3 manage.py migrate --fake [アプリケーション名] zero
+## もう一度履歴を確認して終了(できていれば[])
+> python3 manage.py showmigrate

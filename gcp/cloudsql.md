@@ -22,7 +22,7 @@
   > ユーザーの作成
     GCPサイト上のSQL -> ユーザから作成。
 
-  > データベースの作成 
+  > データベースの作成
     GCPサイト上のSQL -> データベースから作成。
 
   > データベースの準備
@@ -36,6 +36,10 @@
 
   > Cloud SQL インスタンスの初期化
     ./cloud_sql_proxy -instances=[YOUR_INSTANCE_CONNECTION_NAME]=tcp:3306
+
+  ## MySQLの初期化
+  - GCPのデータベースから登録したDBを削除する。
+  - 新しくデータベースを作成すれば完了。
 
   ## MySQLの操作
   > MySQLの操作
