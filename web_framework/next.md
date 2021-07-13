@@ -44,5 +44,5 @@
 	import styles from '../styles/Home.module.css'、
 	return の中身を削除する。
 
-# メモ
+## メモ
 	pagesフォルダにファイルを入れることで自動的にルーティングを設定。
