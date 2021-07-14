@@ -1,10 +1,10 @@
 # GCPへのデプロイ
 
-- AppEngine設定  
-  GCPサイト上からAppEngineに移動し、プロジェクトを作成。
+- AppEngine設定
+GCPサイト上からAppEngineに移動し、プロジェクトを作成。
 
-- app.yamlファイル作成  
-  プロジェクトにて app.yaml ファイルを作成、設定し、gunicornなどのモジュールをインストールする。
+- app.yamlファイル作成
+プロジェクトにて app.yaml ファイルを作成、設定し、gunicornなどのモジュールをインストールする。
 
 - gcloudにログイン
 ```

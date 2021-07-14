@@ -37,11 +37,11 @@
 ```
 
 - Django REST api の取り込み
-	settings.pyのinstalled_appsに 'rest_framework', を追加。
+settings.pyのinstalled_appsに 'rest_framework', を追加。
 
 - Serializerの定義
-	作成したアプリディレクトリの中に、serializer.pyを作成する。
-	作成したpyファイルの中に以下を記載。
+作成したアプリディレクトリの中に、serializer.pyを作成する。
+作成したpyファイルの中に以下を記載。
 ```
 	from rest_framework import serializers
 	from .models import [モデル名]
@@ -55,7 +55,7 @@
 ```
 
 - ViewSetの定義
-	アプリ内のviews.pyに以下を記述。
+アプリ内のviews.pyに以下を記述。
 ```
 	from rest_framework import generics
 	from .models import [モデル名]
@@ -70,7 +70,7 @@
 		serializer_class = [モデル名]Serializer
 ```
 - URL patternの定義
-	プロジェクト内のurls.pyに以下を記述。
+プロジェクト内のurls.pyに以下を記述。
 ```
 	from django.urls import path, include
 	from django.contrib import admin
@@ -91,7 +91,7 @@
 	]
 ```
 - PAGINATIONの活用
-	一度に取得するデータの数を制限する。
+一度に取得するデータの数を制限する。
 ```
 	REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
@@ -130,7 +130,7 @@
 ```
 
 - urlの設定
-	プロジェクトのurls.pyに以下を追加。
+プロジェクトのurls.pyに以下を追加。
 ```
 	from django.conf import settings
 	from django.conf.urls.static import static
@@ -140,7 +140,7 @@
 ```
 
 ## メモ
-	REST apiを作成するには、Serializer, ViewSet, URL patternの最低3つが必要になる。
+REST apiを作成するには、Serializer, ViewSet, URL patternの最低3つが必要になる。
  - Serializerはソフトウェア内部で扱っているデータをそのまま、保存したり送受信することができるように変換すること
  - ViewSetは「APIのクエリーをどう解釈するかを決めるためのもの」
  - URL Patternは「DjangoにURLのパターンを教えるためのもの」

@@ -1,13 +1,13 @@
 # scss
 ## @content
-	@includeでmixinを呼び出す際、@include hoge {}で呼び出し、mixin内で@content;を使うと@include hoge {}の{}内のスタイルが適用される。
+@includeでmixinを呼び出す際、@include hoge {}で呼び出し、mixin内で@content;を使うと@include hoge {}の{}内のスタイルが適用される。
 
 ## 辞書型変数
-	定義
+定義
 ```
 	$[変数名]: ('[キー]': [値]);
 ```
-	値呼び出し
+値呼び出し
 ```
 	map-get($[変数名], '[キー名]');
 ```
@@ -18,7 +18,7 @@
 ```
 
 ## !default
-	常に同じものを定義されていた場合、!defaultをつけたものは後に宣言していても無視される。
+常に同じものを定義されていた場合、!defaultをつけたものは後に宣言していても無視される。
 ### 使用例
 ```
 	$my-black: #333 !default;
