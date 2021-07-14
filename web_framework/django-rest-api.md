@@ -6,6 +6,10 @@
 	pip install django
 	pip install djangorestframework
 ```
+- プロジェクトの作成
+```
+	django-admin startproject [プロジェクト名] .
+```
 - アプリの作成
 ```
 	python manage.py startapp [アプリ名]
@@ -61,7 +65,7 @@
 		queryset = [モデル名].objects.all()
 		serializer_class = [モデル名]Serializer
 
-	class [モデル名]DetailView(generics.ListAPIView):
+	class [モデル名]DetailView(generics.RetrieveAPIView):
 		queryset = [モデル名].objects.all()
 		serializer_class = [モデル名]Serializer
 ```
