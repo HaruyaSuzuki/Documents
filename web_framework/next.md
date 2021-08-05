@@ -32,6 +32,15 @@ styles内のgrobals.cssを以下に書き換え
 	@tailwind utilities;
 ```
 
+## TypeScript導入
+- tsconfig.jsonを作成
+- typescriptパッケージインストール
+```
+	npm install --save-dev @types/react
+```
+- npm run devで再度実行
+- 拡張子を変更(jsx->tsx)
+
 ## その他準備
 - components ディレクトリを作成
 - 必要のないファイル削除

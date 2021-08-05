@@ -16,6 +16,12 @@ gitへpushする際、.gitignoreに非対象ファイルを新しく記述して
 	git rm -r --cached [対象ファイル]
 ```
 
+## git add取り消し
+```
+	初回のgit add: git reset HEAD
+	2回目以降: git reset HEAD [ファイル名]
+```
+
 ## コミットメッセージを修正
 ```
 	git commit --amend -m "[新しいコミットメッセージ]"
