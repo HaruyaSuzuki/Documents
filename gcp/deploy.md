@@ -8,15 +8,15 @@ GCPサイト上からAppEngineに移動し、プロジェクトを作成。
 
 - gcloudにログイン
 ```
-  gcloud auth login
+gcloud auth login
 ```
 
 - プロジェクトの選択
 ```
-  gcloud config set project PROJECT_ID
+gcloud config set project PROJECT_ID
 ```
 
 - デプロイするプロジェクトを指定して実行(デプロイ)
 ```
-  cloud app deploy --project PROJECT_ID
+cloud app deploy --project PROJECT_ID
 ```

@@ -6,16 +6,16 @@
 
 -  node.jsとnpmの確認
 ```
-  node --version
+node --version
 ```
 
 - gulpのインストール
 ```
-  npm init -y
-  npm install gulp -D
-  npx gulp --version
+npm init -y
+npm install gulp -D
+npx gulp --version
 ```
 - gulpで扱うパッケージのインストール
 ```
-  npm install gulp-file-include -D
+npm install gulp-file-include -D
 ```

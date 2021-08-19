@@ -13,18 +13,18 @@ gitへpushする際、.gitignoreに非対象ファイルを新しく記述して
 これは、過去に1度pushしたファイルがそのままキャッシュとして残る為である。
 こうなった際には、以下のコマンドを実行することで、git内のキャッシュデータが削除される。
 ```
-	git rm -r --cached [対象ファイル]
+git rm -r --cached [対象ファイル]
 ```
 
 ## git add取り消し
 ```
-	初回のgit add: git reset HEAD
-	2回目以降: git reset HEAD [ファイル名]
+初回のgit add: git reset HEAD
+2回目以降: git reset HEAD [ファイル名]
 ```
 
 ## コミットメッセージを修正
 ```
-	git commit --amend -m "[新しいコミットメッセージ]"
+git commit --amend -m "[新しいコミットメッセージ]"
 ```
 
 ## 履歴の確認 git log
@@ -43,17 +43,17 @@ gitへpushする際、.gitignoreに非対象ファイルを新しく記述して
 ## 一度pushしたファイルのコミット履歴、ファイルの削除方法
 - 戻りたいコミットのハッシュ値を確認
 ```
-	git log --oneline
+git log --oneline
 ```
 - 現在あるファイルはそのまま手元に残したままリセット
 ```
-	git reset [戻りたいコミット時のハッシュ値] --soft
+git reset [戻りたいコミット時のハッシュ値] --soft
 ```
 - .gitignoreから対象外にして以下のコマンドを実行
 ```
-	git rm --cached [対象外にするファイル]
+git rm --cached [対象外にするファイル]
 ```
 - remoteに強制的にpush
 ```
-	git push -f origin master
+git push -f origin master
 ```
